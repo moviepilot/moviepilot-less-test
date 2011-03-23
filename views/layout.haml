@@ -17,7 +17,7 @@
     - if author = @author
       %meta(name="author" content="#{author}")
     %title= @title
-    %meta(name="viewport" content="width=device-width; initial-scale=1.0")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1")
     %link(rel="shortcut icon" href="#{asset_url('favicon.ico')}")
     %link(rel="apple-touch-icon" href="#{asset_url('apple-touch-icon.png')}")
     %link(rel="stylesheet" href="#{asset_url('stylesheets/moviepilot-less-test.css?v=1')}")
@@ -28,8 +28,9 @@
     %script for(var e,l='article aside figcaption figure footer header nav section time'.split(' ');e=l.pop();document.createElement(e));try{Typekit.load()}catch(e){}onload=function(){#{javascripts(:moviepilot_less_test)}}#{%Q(var ol=function(){#{compress_javascript(javascript)}}) if javascript}
   %body
     %header
-      %a#logo(href="#{asset_url('.')}")
-        = image_tag 'moviepilot-less-test.png', :alt => 'moviepilot-less-test'
+      #inner-header
+        %a#logo(href="#{asset_url('.')}")
+          %img(src="images/moviepilot.png" alt="moviepilot-less-test")
     #header
       = yield_content :header
     #content
