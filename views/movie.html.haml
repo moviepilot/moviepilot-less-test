@@ -1,0 +1,49 @@
+- content_for :header do
+  %nav
+    %a(href="#abstract") Beschreibung
+    %a(href="#actors") Darsteller
+    %a(href="#comments") Kommentare
+  %hgroup
+    %h1 In einer besseren Welt
+    %h2 DK 2010
+  #trailer
+  %figure#poster
+    %img(src="/images/poster.jpg")
+  %section#info
+    %p
+      Anton (<a href="http://www.moviepilot.de/people/mikael-persbrandt">Mikael Persbrandt</a>) arbeitet als Arzt mehrere Monate im Jahr in einem afrikanischen Flüchtlingscamp.
+      %a.more(href="#") Mehr
+    %dl
+      %dt Darsteller
+      %dd<
+        %a(href="/people/mikael-persbrandt" title="Mikael Persbrandt – Filmographie, News & Bilder")<
+          Mikael Persbrandt
+      %dd<
+        %a(href="/people/trine-dyrholm" title="Trine Dyrholm – Filmographie, News & Bilder")<
+          Trine Dyrholm
+      %dd<
+        %a.more(href="#")< Mehr
+      %dt Regieseur
+      %dd<
+        %a(href="/people/susanne-bier" title="Susanne Bier – Filmographie, News & Bilder")<
+          Susanne Bier
+  
+%section#consumption
+  %ul
+    %li.cinema.cinemaxx
+      %h3 20:00, 22:30
+      %p Cinemaxx Potsdamer Platz
+
+%section#photos
+  %ul
+    - 1.upto 6 do |i|
+      %li
+        %img(src="/images/photo-#{i}.jpg")
+
+%article#abstract
+  %p
+    Anton (<a href="http://www.moviepilot.de/people/mikael-persbrandt">Mikael Persbrandt</a>) arbeitet als Arzt mehrere Monate im Jahr in einem afrikanischen Flüchtlingscamp. Zu Hause in Dänemark ist seine Ehe mit Marianne (<a href="http://www.moviepilot.de/people/trine-dyrholm">Trine Dyrholm</a>) so gut wie gescheitert, die beiden wollen sich scheiden lassen. Elias, der zehnjährige Sohn der beiden, ist ein echter …
+
+%section#comments
+  %ul
+    %li

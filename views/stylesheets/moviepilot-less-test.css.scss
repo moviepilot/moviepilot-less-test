@@ -22,6 +22,10 @@ $large-font-size: 20px;
 $x-large-font-size: 30px;
 $base-line-height: 1.231;
 
+$column-width: 68px;
+$gap-width: 24px;
+$border: 1px #999 solid;
+
 // HTML5 boilerplate
 
 @include html5-boilerplate;
@@ -33,6 +37,7 @@ $base-line-height: 1.231;
 @import "global/typography";
 @import "global/links";
 @import "global/buttons";
+@import "global/dls";
 
 // Layout (header, footer, global sidebars)
 
@@ -40,4 +45,5 @@ $base-line-height: 1.231;
 
 // Content partials (article, lists, ...)
 
-//@import "partials/xyz";
+@import "partials/more";
+@import "partials/movie";

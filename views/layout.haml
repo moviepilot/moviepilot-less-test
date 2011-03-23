@@ -4,7 +4,7 @@
 - @title         = [@title, 'moviepilot-less-test'].compact.join(' - ')
 - current_page_relative_path = "."
 !!!  
-%html(lang="#{@lang}" class="no-js")
+%html(lang="#{@lang}" class="no-js #{page_classes.gsub('_', '-')}")
   /
      
     Designed and developed by www.hagenburger.net
@@ -30,8 +30,12 @@
     %header
       %a#logo(href="#{asset_url('.')}")
         = image_tag 'moviepilot-less-test.png', :alt => 'moviepilot-less-test'
-    #main
+    #header
+      = yield_content :header
+    #content
       = yield
+    #more
+      = partial :more
     %footer
 
     %script(src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js")

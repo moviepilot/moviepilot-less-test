@@ -1,0 +1,24 @@
+dl {
+  margin: 1em 0;
+  overflow: hidden;
+}
+
+dt {
+  clear: left;
+  float: left;
+  font-weight: bold;
+  &:after {
+    content: ": ";
+  }
+}
+
+dd {
+  float: left;
+  margin-right: 0.3em;
+  + dd {
+    &:before {
+      content: "·";
+      margin-right: 0.3em;
+    }
+  }
+}

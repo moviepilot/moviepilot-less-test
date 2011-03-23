@@ -1,0 +1,139 @@
+#trailer {
+  @extend .has-4-columns;
+  background: black;
+  float: right;
+  height: 226px;
+  margin-left: $gap-width;
+}
+
+@media only screen and (max-width: 991px) {
+  #trailer {
+    display: none;
+  }
+}
+
+
+
+#poster img {
+  @extend .has-2-columns;
+  float: left;
+  height: 226px;
+  margin: 0 2 * $gap-width + $column-width $gap-width 0;
+}
+
+@media only screen and (max-width: 767px) {
+  #poster img {
+    margin: 0 $gap-width $gap-width 0;
+  }
+}
+
+
+
+#info {
+  @extend .has-6-columns;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 479px) {
+  #info {
+    clear: both;
+    height: 140px;
+  }
+}
+
+
+
+
+#consumption {
+  background: white;
+  height: 50px;
+  left: 3 * ($gap-width + $column-width);
+  position: absolute;
+  padding: 10px;
+  top: -70px - 2 * $gap-width;
+  width: 3 * $column-width + 2 * $gap-width - 20px;
+  @include border-radius(5px);
+  ul {
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+  li {
+    list-style: none;
+  }
+  p,
+  h3 {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 991px) {
+  #consumption {
+    left: 2 * ($gap-width + $column-width);
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  #consumption {
+    position: static;
+  }
+}
+
+
+#photos {
+  ul {
+    margin: 0 0 - $gap-width 0 0;
+    text-align: center;
+  }
+  li {
+    list-style: none;
+    float: left;
+    margin: 0 $gap-width $gap-width 0;
+  }
+  img {
+    width: $column-width;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #photos {
+    ul {
+      top: -226px - 2 * $gap-width;
+      position: absolute;
+      right: - $column-width - $gap-width;
+      width: 2 * ($column-width + $gap-width);
+    }
+    li {
+      margin-bottom: 6px;
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  #photos {
+    li {
+      display: none;
+      &:nth-child(-n+5) {
+        display: block;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  #photos {
+    ul {
+      top: -226px - 2 * $gap-width - 140px;
+      position: absolute;
+      right: 0;
+      width: $column-width + $gap-width;
+    }
+    li {
+      display: none;
+      margin-bottom: 6px;
+      &:nth-child(-n+3) {
+        display: block;
+      }
+    }
+  }
+}

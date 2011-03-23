@@ -1,3 +1,7 @@
 a {
   @include hover-link;
+  &.more:after {
+    content: "…";
+    margin-left: 0.12em;
+  }
 }

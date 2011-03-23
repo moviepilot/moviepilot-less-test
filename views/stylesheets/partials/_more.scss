@@ -1,0 +1,10 @@
+#more {
+  ul {
+    border-top: $border;
+    margin-bottom: $gap-width;
+  }
+  li {
+    border-bottom: $border;
+    padding: 5px 0;
+  }
+}
